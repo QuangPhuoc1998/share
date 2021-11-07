@@ -1,0 +1,22 @@
+Tự xây dựng một tập lệnh AT trên vi điều khiển
+/*---*/
+Trong video này, mình sẽ chạy demo việc xây dựng tập lệnh AT 
+trên vi điều khiển qua UART để đọc, cài đặt thời gian, đọc nhiệt độ
+và điều khiển đèn led.
+Các phần mềm mình sử dụng gồm:
+- Proteus 8.6 để mô phỏng mạch
+- Microchip studio để lập trình cho vi điều khiển
+- Termite 3.4 để giao tiếp với vi điều khiển qua UART
+- Virtual Serial Port Driver để tạo cổng COM ảo.
+Vi điều khiển mình sử dụng là atmega328P, các ngoại vi dùng gồm:
+- UART - nhân vật chính, trong đó có dùng thêm 2 thư viện phụ là
++ Ringbuffer: giúp quản lý dữ liệu tiện lợi hơn
++ CLI (command line interface): quản lý các lệnh
+- Timer 1: tạo ngắt 1ms để chạy bộ lập lịch
+- ADC: đọc cảm biến nhiệt độ lm35
+- GPIO: để điều khiển led
+Cấu trúc lệnh AT (Mình dựa vào tập lệnh AT của các chip quetel)
+- AT+<cmd>  	:   lệnh thực thi
+- AT+<cmd>=?	:   lệnh trả về các tham số của lệnh
+- AT+<cmd>=<...>:   lệnh ghi
+- AT+<cmd>?	:   lệnh đọc
