@@ -1,7 +1,7 @@
 Tự xây dựng một tập lệnh AT trên vi điều khiển
-/*---*/
+/*-----------------------------------------------------*/
 Trong video này, mình sẽ chạy demo việc xây dựng tập lệnh AT 
-trên vi điều khiển qua UART để đọc, cài đặt thời gian, đọc nhiệt độ
+trên vi điều khiển qua giao tiếp UART để đọc, cài đặt thời gian, đọc nhiệt độ
 và điều khiển đèn led.
 Các phần mềm mình sử dụng gồm:
 - Proteus 8.6 để mô phỏng mạch
@@ -20,3 +20,5 @@ Cấu trúc lệnh AT (Mình dựa vào tập lệnh AT của các chip quetel)
 - AT+<cmd>=?	:   lệnh trả về các tham số của lệnh
 - AT+<cmd>=<...>:   lệnh ghi
 - AT+<cmd>?	:   lệnh đọc
+Các bạn có thể tải project mô phỏng và file hex tại đây
+https://github.com/QuangPhuoc1998/share/tree/main/cli_template
