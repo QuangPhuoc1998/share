@@ -1,0 +1,1 @@
+stm32f769ni_bootloader\startup_stm32f769xx.o: startup_stm32f769xx.s
